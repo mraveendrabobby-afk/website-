@@ -4,25 +4,90 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BOBBY</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="home.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+    /* Navbar Profile Styling */
+    
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #111;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff0;
+      font-size: 1.8rem;
+    }
+
+    /* NAV + PROFILE */
+    .nav-profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a.active {
+      color: #00fff0;
+    }
+
+    .nav a:hover {
+      color: #00ffff;
+    }
+
+    /* PROFILE PHOTO */
+    .profile-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image: url('../assets/bobby.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #00fff0;
+    }
+  </style>
 </head>
 <body>
-
   <div class="container">
 
     <!-- HEADER -->
     <header class="header">
       <h2 class="logo glitch">Raveendra</h2>
+      <nav class="nav">
+        <a href="./code.html" class="active">// projects</a>
+        <a href="./contact.html">// contact</a>
+        <div class="profile-photo" style="background-image: url('./assets/bobby.jpg');"></div>
+      </nav>
     </header>
-
-    <!-- NAVIGATION -->
-    <nav class="nav">
-      <a href="./home.html" class="active">// projects</a>
-      <a href="./contact.html">// contact</a>
-      <div class="profile-photo" style="background-image: url('./bobby.jpg');"></div>
-    </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
