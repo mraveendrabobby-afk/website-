@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOBBY</title>
+  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+    /* Navbar Profile Styling */
+    
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #111;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff0;
+      font-size: 1.8rem;
+    }
+
+    /* NAV + PROFILE */
+    .nav-profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a.active {
+      color: #00fff0;
+    }
+
+    .nav a:hover {
+      color: #00ffff;
+    }
+
+    /* PROFILE PHOTO */
+    .profile-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image: url('../assets/bobby.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #00fff0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h2 class="logo glitch">Raveendra</h2>
+      <nav class="nav">
+        <a href="./code.html" class="active">// projects</a>
+        <a href="./contact.html">// contact</a>
+        <div class="profile-photo" style="background-image: url('./assets/bobby.jpg');"></div>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1 class="hero-title glitch">HEY, I'M BOBBY</h1>
+      <p class="hero-sub">// A cyber-wizard crafting digital realities</p>
+    </section>
+
+    <!-- ABOUT / TIMELINE SECTION -->
+    <section class="about">
+      <h2 class="about-title glitch-2">// ABOUT_ME.md</h2>
+
+      <div class="timeline">
+        <!-- 2020 -->
+        <div class="timeline-item">
+          <div class="icon">👾</div>
+          <div class="content">
+            <h3 class="year neon-cyan">2020: The Spark</h3>
+            <p>
+              The story began when I started my journey in Computer Science Engineering. That was the year I truly stepped into the world of technology. My curiosity about how websites worked led me to explore WordPress development—building, breaking, and rebuilding sites until every plugin and pixel made sense.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="timeline-item">
+          <div class="icon">🧠</div>
+          <div class="content">
+            <h3 class="year neon-magenta">2021: Building the Foundations</h3>
+            <p>
+              After a year of WordPress, I wanted more control—more power over what I created. I began learning core programming concepts and web technologies, diving deeper into HTML, CSS, and JavaScript. These early experiments helped me understand how logic and design come together to shape the user experience.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2022–2023 -->
+        <div class="timeline-item">
+          <div class="icon">🚀</div>
+          <div class="content">
+            <h3 class="year neon-yellow">2022–2023: Into the Shadows</h3>
+            <p>
+              My journey led me deep into the world of cybersecurity. I started studying network defense, ethical hacking, and digital forensics. Tools like Wireshark, Burp Suite, and Nmap became my weapons of choice. I participated in cybersecurity challenges and government-level programs through platforms like ICCC and AP Cyber, sharpening my skills in threat hunting and vulnerability assessment. During my time with Virtual Cyber Labs, I trained as a SOC (Security Operations Center) analyst, tracking real-time threats and gaining hands-on experience as a Digital Cyber Criminologist.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024–Present -->
+        <div class="timeline-item">
+          <div class="icon">✨</div>
+          <div class="content">
+            <h3 class="year neon-primary">2024–Present: Back to Building</h3>
+            <p>
+              After understanding how systems break, I wanted to master how to build them—securely. I’ve transitioned into web development, focusing on frontend development with React and backend development with Django. I’m currently working toward becoming a full-stack or backend developer, bringing together my security background and development skills to build powerful, resilient applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

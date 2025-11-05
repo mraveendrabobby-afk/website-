@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitch Design</title>
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0410;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid rgba(0, 255, 252, 0.2);
+            background-color: rgba(10, 4, 16, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        header h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 24px;
+            color: #00fffc;
+            text-shadow: 0.05em 0 0 #00fffc, -0.025em -0.05em 0 #fc00ff, 0.025em 0.05em 0 #fffc00;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s;
+        }
+
+        header nav a.active,
+        header nav a:hover {
+            color: #00fffc;
+        }
+
+        header .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fc00ff;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Main */
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        main h1 {
+            text-align: center;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #00fffc;
+            text-shadow: 0.05em 0 0 #00fffc, -0.025em -0.05em 0 #fc00ff, 0.025em 0.05em 0 #fffc00;
+        }
+
+        main p {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .project-card {
+            background-color: rgba(10, 4, 16, 0.5);
+            border: 2px solid rgba(0, 255, 252, 0.3);
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #00fffc;
+            box-shadow: 0 0 20px #00fffc;
+        }
+
+        .project-image {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            color: #00fffc;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            border: 1px solid #00fffc;
+            color: #00fffc;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover .tag {
+            background-color: #00fffc;
+            color: black;
+            box-shadow: 0 0 10px #00fffc;
+        }
+
+        .github-link {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #fffc00;
+        }
+
+        .github-link svg {
+            margin-right: 5px;
+        }
+
+        /* Full GitHub Link */
+        .full-github {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: #fffc00;
+            transition: color 0.3s;
+        }
+
+        .full-github:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h2>Raveendra</h2>
+    </div>
+    <nav>
+        <a href="./home.html">// HOME</a>
+        <a href="#" class="active">// PROJECTS</a>
+        <a href="./contact.html">// CONTACT</a>
+    </nav>
+    <div class="profile-pic" style="background-image: url('./assets/bobby.jpg');"></div>
+</header>
+
+<main>
+    <h1>[PROJECTS]</h1>
+    <p>A curated collection of my digital creations and chaotic experiments. Each project is a piece of my soul, coded in neon and dreams.</p>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVZwRle1cBIYIGD9kyY48Wm4oOtC8MBM87pQUWqeGuqcjkLCgV0ZcvQzcXWb5Sht7giBR8YkHWF5SbgAYFcOEEI6JiTbfdIiCXw2_OQ4EtlUulOvvM1PItl3sGIuB_zCz3a6M75GoepzecXCMoMLDwGOCekPtSBITneND6tdMUIw6t3ZpUFbpOIbeyxtWf2rYI5UVg7QRFPO1QmZ9Cwg0qALmq_HVRyLIMXrALdqKAvWpKwC7rjvxcbPdA95ps5xZdswsOF6uSf_A');"></div>
+            <h3>Cyberpunk City Sim</h3>
+            <p>A sprawling, neon-drenched metropolis simulation built with dynamic AI and emergent gameplay systems.</p>
+            <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">HLSL</span>
+            </div>
+            <a href="#" class="github-link">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9ENQRMcPNa02S7T9t7fu4tOUXNWl0qpaHJbD1TAJqXg-wDGrQajfK8QhGLi1xYWjaMYSTTm8iIj9w58ouVhppQfhL3tA7uUsOYqrIbQHJtDxvtjofOggy01hlwT2-aimQ1G5ZVVJ45_1UY7sJ2RWcIxmoW0vHhJKFUDH0K2oboXLxt7Yzg8tOGstEO1amGEgExaXuBiUiP904TkkbvTXxyc74VGhZjjsmq_jOWkZupkr98NsKtuf9ooBamPeA43r10gZI0JDtBfg');"></div>
+            <h3>Neural-Net Art GEN</h3>
+            <p>A generative adversarial network that dreams up surreal and abstract digital art from textual prompts.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">React</span>
+            </div>
+            <a href="#" class="github-link">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfHafA_EOo9dPbTmQxF56BB30sR9D8GRduCtckjx9m6f99vp8wUUMg22K9wuxe8O1dm7iPygHp_Bhbti3vgYMXdJjFv5KKU89ZIW4fUEjm8yyRmBAwg4_QZ3_Q-7uT3JePrWU5j11nCfyInEpUML_Bh8nb6geVWtK8uyTCQ6QbfO7d7BJO4ecmpe6x5ZocDSlFKbf3b6RijtqwJ8QENPPMqZW9szcBe6o-OXKTILOHCPSaV3vfrjrxYerPGMyBB5ne-4Uiza23czc');"></div>
+            <h3>DeFi Storage Protocol</h3>
+            <p>A secure, decentralized file storage solution leveraging IPFS and Ethereum smart contracts for data integrity.</p>
+            <div class="tags">
+                <span class="tag">Go</span>
+                <span class="tag">IPFS</span>
+                <span class="tag">Ethereum</span>
+            </div>
+            <a href="#" class="github-link">View on GitHub</a>
+        </div>
+    </div>
+
+    <a href="#" class="full-github">&gt; ACCESS FULL GITHUB ARCHIVES_</a>
+</main>
+
+</body>
+</html>

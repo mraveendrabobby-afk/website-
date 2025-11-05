@@ -1,0 +1,203 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================= COLORS ================= */
+:root {
+  --primary: #a413ec;
+  --neon-cyan: #00fffc;
+  --neon-magenta: #fc00ff;
+  --neon-yellow: #fffc00;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(13, 13, 13, 0.9);
+  border-bottom: 1px solid var(--primary);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  padding-top: 10px;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
+/* ================= GLITCH EFFECT ================= */
+.glitch, .glitch-2 {
+  text-shadow: 0.05em 0 0 var(--neon-cyan),
+               -0.025em -0.05em 0 var(--neon-magenta),
+               0.025em 0.05em 0 var(--neon-yellow);
+}
+
+@keyframes glitch {
+  0%, 15% {
+    text-shadow: 0.05em 0 0 var(--neon-cyan),
+                 -0.025em -0.05em 0 var(--neon-magenta),
+                 0.025em 0.05em 0 var(--neon-yellow);
+  }
+  16%, 49% {
+    text-shadow: -0.05em -0.025em 0 var(--neon-cyan),
+                 0.025em 0.05em 0 var(--neon-magenta),
+                 -0.05em -0.05em 0 var(--neon-yellow);
+  }
+  50%, 99% {
+    text-shadow: 0.05em 0.025em 0 var(--neon-cyan),
+                 0.05em 0 0 var(--neon-magenta),
+                 0 0.05em 0 var(--neon-yellow);
+  }
+  100% {
+    text-shadow: -0.05em 0 0 var(--neon-cyan),
+                 -0.025em -0.05em 0 var(--neon-magenta),
+                 -0.05em -0.05em 0 var(--neon-yellow);
+  }
+}
+
+.glitch {
+  animation: glitch 0.6s infinite;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.about-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 2px;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child::before {
+  height: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0d0d0d;
+  border: 2px solid var(--primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.content h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ================= COLOR HELPERS ================= */
+.neon-cyan {
+  color: var(--neon-cyan);
+}
+.neon-magenta {
+  color: var(--neon-magenta);
+}
+.neon-yellow {
+  color: var(--neon-yellow);
+}
+.neon-primary {
+  color: var(--primary);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOBBY</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+
+  <div class="container">
+    <header class="header">
+      <div class="logo-section">
+        <svg class="logo" fill="none" height="24" width="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+        </svg>
+        <h2 class="site-title glitch">BOBBY</h2>
+      </div>
+
+      <nav class="nav">
+        <a href="./home.html">Home</a>
+        <a href="./code.html">Projects</a>
+        <a class="active" href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="content">
+        <h1 class="title glitch-2">CONTACT_</h1>
+        <p class="subtitle">Initiate contact sequence. All fields are mandatory.</p>
+
+        <div class="contact-box">
+          <div class="terminal-line">
+            <span class="prompt">&gt;</span>
+            <p>Executing contact.sh...</p>
+          </div>
+
+          <form class="contact-form">
+            <div class="input-group">
+              <label for="name">name:</label>
+              <div class="input-line">
+                <span class="prompt">$</span>
+                <input type="text" id="name" placeholder="your_callsign" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="email">email:</label>
+              <div class="input-line">
+                <span class="prompt">$</span>
+                <input type="email" id="email" placeholder="your_secure_channel" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="message">message:</label>
+              <div class="input-line">
+                <span class="prompt">$</span>
+                <textarea id="message" rows="4" placeholder="your_encrypted_transmission"></textarea>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button type="submit" class="send-btn">SEND_MESSAGE <span class="cursor"></span></button>
+
+              <div class="tooltip">
+                <button type="button" class="self-destruct-btn">SELF_DESTRUCT</button>
+                <span class="tooltiptext">rm -rf / --no-preserve-root</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Bobby. All systems operational.</p>
+      <div class="links">
+        <a href="https://github.com/mraveendrabobby-afk" target="_blank">// GitHub</a>
+        <a href="https://www.linkedin.com/in/raveendrabobby?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
