@@ -51,6 +51,7 @@ a {
   font-weight: 700;
 }
 
+/* NAVIGATION */
 .nav {
   display: flex;
   gap: 2rem;
@@ -67,6 +68,16 @@ a {
 .nav a.active {
   color: var(--primary);
   text-shadow: 0 0 10px var(--primary);
+}
+
+/* PROFILE PHOTO */
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #00fff0;
 }
 
 /* ================= HERO ================= */
@@ -189,18 +200,10 @@ a {
 }
 
 /* ================= COLOR HELPERS ================= */
-.neon-cyan {
-  color: var(--neon-cyan);
-}
-.neon-magenta {
-  color: var(--neon-magenta);
-}
-.neon-yellow {
-  color: var(--neon-yellow);
-}
-.neon-primary {
-  color: var(--primary);
-}
+.neon-cyan { color: var(--neon-cyan); }
+.neon-magenta { color: var(--neon-magenta); }
+.neon-yellow { color: var(--neon-yellow); }
+.neon-primary { color: var(--primary); }
 
 /* ================= HAMBURGER MENU ================= */
 .menu-toggle {
@@ -208,6 +211,7 @@ a {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  margin-left: auto;
 }
 
 .menu-toggle .bar {
@@ -218,7 +222,6 @@ a {
   transition: 0.3s;
 }
 
-/* Animate hamburger to X */
 .menu-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -239,12 +242,17 @@ a {
     width: 100%;
     gap: 15px;
     padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
   }
 
-  .nav.active { display: flex; }
+  .nav.active {
+    display: flex;
+    max-height: 500px; /* enough for all links */
+  }
 
   .header { flex-direction: column; align-items: flex-start; padding: 1rem; }
-
   .profile-photo { width: 35px; height: 35px; }
 
   .hero { padding: 4rem 1rem; }
