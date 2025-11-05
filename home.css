@@ -202,92 +202,67 @@ a {
   color: var(--primary);
 }
 
+/* ================= HAMBURGER MENU ================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate hamburger to X */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
-  /* Container adjustments */
-  .container {
-    padding: 0 1rem;
-  }
-
-  /* Header / Navbar */
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
+  .menu-toggle { display: flex; }
 
   .nav {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    gap: 15px;
     padding-top: 10px;
   }
 
-  /* Profile photo smaller */
-  .profile-photo {
-    width: 35px;
-    height: 35px;
-  }
+  .nav.active { display: flex; }
 
-  /* Hero section */
-  .hero {
-    padding: 4rem 1rem;
-  }
+  .header { flex-direction: column; align-items: flex-start; padding: 1rem; }
 
-  .hero-title {
-    font-size: 2rem;
-  }
+  .profile-photo { width: 35px; height: 35px; }
 
-  .hero-sub {
-    font-size: 1rem;
-  }
+  .hero { padding: 4rem 1rem; }
+  .hero-title { font-size: 2rem; }
+  .hero-sub { font-size: 1rem; }
 
-  /* About section / timeline */
-  .about {
-    padding: 4rem 1rem;
-  }
+  .about { padding: 4rem 1rem; }
+  .about-title { font-size: 2rem; }
 
-  .about-title {
-    font-size: 2rem;
-  }
-
-  .timeline {
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    padding-left: 60px;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .content h3 {
-    font-size: 1.2rem;
-  }
-
-  .content p {
-    font-size: 0.9rem;
-  }
+  .timeline::before { left: 20px; }
+  .timeline-item { padding-left: 60px; }
+  .icon { width: 40px; height: 40px; font-size: 1.2rem; }
+  .content h3 { font-size: 1.2rem; }
+  .content p { font-size: 0.9rem; }
 }
 
-/* Optional: smaller screens for very narrow devices */
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.5rem;
-  }
-  .hero-sub {
-    font-size: 0.9rem;
-  }
-  .nav a {
-    font-size: 0.9rem;
-  }
+  .hero-title { font-size: 1.5rem; }
+  .hero-sub { font-size: 0.9rem; }
+  .nav a { font-size: 0.9rem; }
 }
-
-
